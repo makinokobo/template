@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/*!
+ * Browser Style Reset
+ *
+ * Copyright (c) 2011 Skill Partners Inc. All Rights Reserved.
+ *
+ * @version : 1.1 - 2011.08.01 - oosugi@skillpartners.co.jp
+ * @author  : http://www.makinokobo.com - kobo@makinokobo.com
+ */
+
+body,div,
+h1,h2,h3,h4,h5,h6,
+dl,dt,dd,ul,ol,li,
+p,blockquote,pre,code,
+form,fieldset,legend,
+table,thead,tbody,tfoot,tr,th,td {margin: 0; padding: 0;}
+
+html,body {background: #FFF; color: #000;}
+
+body {font:13px/1 "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ","Meiryo","ＭＳ Ｐゴシック",sans-serif; -webkit-text-size-adjust:none; -ms-text-size-adjust: 100%;}
+* html body {font-size: small;}
+*:first-child+html body {font-size: small;}
+head~/* */body {font-size: small;}
+html:not(:target) body {font-size: 13px;}
+
+#document {font-size: 77%;} /* 10px */
+
+img {border: 0; vertical-align: bottom;}
+
+h1,h2,h3,h4,h5,h6 {clear: both; font-size: 100%; font-weight: normal;}
+
+ul,dl,ol {text-indent: 0;}
+li {list-style: none; list-style-position:outside;}
+
+address,caption,cite,code,dfn,em,strong,th,var {font-style: normal; font-weight: normal;}
+
+sup {vertical-align: text-top; line-height: 1;}
+sub {vertical-align: text-bottom; line-height: 1;}
+
+input,textarea,select {font-family: inherit; font-size: inherit; font-weight:inherit;}
+* html input,* html textarea,* html select {font-size: 100%;}
+*:first-child+html+input,*:first-child html+textarea,*:first-child+html select {font-size: 100%;}
+head~/* */body input, head~/* */body textarea, head~/* */body select {font-size: 100%;}
+html:not(:target) body input, html:not(:target) body textarea, html:not(:target) body select {font-size: inherit;}
+
+table {border-collapse: collapse; border-spacing: 0; font-size: inherit;}
+th,td {text-align: left; vertical-align: top;}
+caption {text-align: left;}
+
+pre,code,kbd,samp,tt {font-family: monospace;}
+
+input,select,textarea {font-size: 100%; font-family: Verdana, Helvetica, sans-serif;}
+input,select {vertical-align: middle;}
