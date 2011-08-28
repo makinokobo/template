@@ -1,14 +1,30 @@
 @charset "utf-8";
 
 /*!
- * Import Stylesheet
+ * Import CSS
  *
+ * サイト共通で使うCSS全てを読み込む。
  *
+ * [!] スタイル継承に不具合が起きる可能性があるので順番を入れ替えてはならない。
+ *
+ * reset.css: ブラウザリセット用
+ * base.css : ページ・テンプレート部分の設定ファイル
+ * parts.css: 共通パーツ群の設定ファイル。共通パーツ同士は入れ子にしない作りにする。
+ * common.css: 共通パーツをまたいで使用したりする共通設定。
+ * script.css: JSで使うスタイル
  */
 
 
 @import "reset.css";
 @import "base.css";
 @import "parts.css";
+@import "common.css";
+@import "script.css";
 
 
+/*
+ * Releace Notes
+ *
+ * 2011-08-06 - oosugi@skillpartners.co.jp
+ *              コメント追記
+ */

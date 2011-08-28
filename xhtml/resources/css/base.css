@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/*!
+ * base.css
+ *
+ * ページ・テンプレートとなる大枠部分、
+ * 背景・ヘッダー・フッター・大枠のカラム分けなどの設定ファイル。
+ * CSSで使う背景画像は、共通のアイコン等以外すべて、
+ * /resources/img/base 以下に格納する。
+ */
+
+
+/**
+ * structure
+ *
+ * 基本的なエリア（枠組み）のカラム分けと背景を設定
+ * @create: 2011-00-00 [NAME@skillpartners.co.jp]
+ * @modify: 2011-00-00 [NAME@skillpartners.co.jp]
+ */
+
+html, body {
+	/* メイン背景・文字色 */
+	background-color: #FFFFFF;
+	color: #333333;
+}
+
+
+body {
+}
+
+
+a {
+	color: #0099CC;
+	text-decoration: underline;
+}
+
+a:link    {}
+a:visited { color: #006282; }
+a:hover   { color: #00B3EE; }
+a:active  { color: #00B3EE; }
+
+
+#document {
+}
+
+
+#header {
+}
+
+
+#article {
+}
+
+
+#footer {
+}
+
+
+.section {
+}
+
+.section .section {
+}
+
+.section .section .section {
+}
+
+
+
+/**
+ * header
+ *
+ * @create: 2011-00-00 [NAME@skillpartners.co.jp]
+ * @modify: 2011-00-00 [NAME@skillpartners.co.jp]
+ */
+
+#header {
+}
+
+
+	/**
+	 * INNERCLASS
+	 */
+	#header .INNERCLASS {
+	}
+
+
+
+/**
+ * footer
+ *
+ * @create: 2011-00-00 [NAME@skillpartners.co.jp]
+ * @modify: 2011-00-00 [NAME@skillpartners.co.jp]
+ */
+
+#footer {
+	background: #EFEFEF url(../img/base/bg_03.png) repeat-x;
+}
+
+
+	/**
+	 * INNERCLASS
+	 */
+	#footer .INNERCLASS {
+	}
+
+
+
+/*
+ * Release Notes:
+ * 
+ * 2011-00-00 [NAME@skillpartners.co.jp]
+ *   @create: all
+ */

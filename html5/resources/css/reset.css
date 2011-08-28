@@ -1,13 +1,24 @@
 @charset "utf-8";
 
 /*!
- * Reset Stylesheet for Smartphone
+ * 牧野工房 Reset CSS for HTML5
+ *
+ * Copyright (c) 2011 Skill Partners Inc. All Rights Reserved.
  * 
- * @version : 0 - 2011.07.07 - oosugi@skillpartners.co.jp
+ * @version : 0
  * @author  : http://www.makinokobo.com - kobo@makinokobo.com
  * 
  */
 
+
+/**
+ * Browser Style Reset
+ *
+ * ブラウザスタイルをリセットする。
+ * フォントサイズは body要素直下の div#documentを10pxにセットし、
+ * 移行の設定は相対でem指定する。
+ * これにより、IE6でもブラウザ機能の文字サイズ変更が可能。
+ */
 
 
 html, body {
@@ -27,10 +38,17 @@ object, iframe, form, fieldset, legend, label {
 }
 
 body {
-	font: 10px/1 sans-serif;
+	font: 13px/1 "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
+* html body {font-size: small;}
+*:first-child+html body {font-size: small;}
+head~/* */body {font-size: small;}
+html:not(:target) body {font-size: 13px;}
+
+#document {font-size: 77%;} /* 10px */
+
 
 img {
 	border: none;
@@ -47,11 +65,17 @@ h2 { font-size: 1.8em; line-height: 1.223; }
 h3 { font-size: 1.6em; line-height: 1.25;  }
 
 h4, h5, h6,
-p, blockquote, pre, th, td, li, dt, dd,
-input, select, textarea {
+p, blockquote, pre, th, td, li, dt, dd {
 	font-size: 1.4em;
 	line-height: 1.286;
 }
+
+td p, td blockquote, td pre, td th, td td, td dt, td dd, td h4, td h5, td h6,
+li p, li blockquote, li pre, li th, li td, li dt, li dd, li h4, li h5, li h6,
+dd p, dd blockquote, dd pre, dd th, dd td, dd dt, dd dd, dd h4, dd h5, dd h6 {
+	font-size: 1em;
+}
+
 
 strong, dt, dfn {
 	font-style: normal;
@@ -71,8 +95,17 @@ address, caption, cite, code, th {
 sup { vertical-align: text-top;    font-size: 0.75em; line-height: 1; }
 sub { vertical-align: text-bottom; font-size: 0.75em; line-height: 1; }
 
+input,textarea,select {font-family: inherit; font-size: inherit; font-weight:inherit;}
+* html input,* html textarea,* html select {font-size: 100%;}
+*:first-child+html+input,*:first-child html+textarea,*:first-child+html select {font-size: 100%;}
+head~/* */body input, head~/* */body textarea, head~/* */body select {font-size: 100%;}
+html:not(:target) body input, html:not(:target) body textarea, html:not(:target) body select {font-size: inherit;}
+
 pre, code { font-family: monospace; }
 
+table {border-collapse: collapse; border-spacing: 0; font-size: inherit;}
+th,td {text-align: left; vertical-align: top;}
+caption {text-align: left;}
 
 ul, dl, ol {
 	text-indent: 0;
@@ -84,6 +117,17 @@ li {
 }
 
 
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+audio, video {
+  margin: 0;
+  padding: 0;
+}
 
 input[type="radio"]    {}
 input[type="checkbox"] {}
@@ -99,54 +143,72 @@ textarea {}
 
 
 
-.imt-fz-LLL { font-size:   2em !important; }
-.imt-fz-LL  { font-size: 1.8em !important; }
-.imt-fz-L   { font-size: 1.6em !important; }
-.imt-fz-M   { font-size: 1.4em !important; }
-.imt-fz-S   { font-size: 1.2em !important; }
-.imt-fz-SS  { font-size:   1em !important; }
-.imt-fz-SSS { font-size: 0.8em !important; }
+/**
+ * Utillity Class
+ *
+ * !important設定により、どこでも使える微調整用のclass群。
+ * CSS設計時には使用せず、主に運用や修正フェーズで、
+ * 共通設定されたCSSを書き換えるより個別に設定したほうがよいと判断される場合に使用する。
+ *
+ * Prefix: ".imp-"
+ */
+
+.imp-fz-LLL { font-size:   2em !important; }
+.imp-fz-LL  { font-size: 1.8em !important; }
+.imp-fz-L   { font-size: 1.6em !important; }
+.imp-fz-M   { font-size: 1.4em !important; }
+.imp-fz-S   { font-size: 1.2em !important; }
+.imp-fz-SS  { font-size:   1em !important; }
+.imp-fz-SSS { font-size: 0.8em !important; }
 
 
-.imt-al-right  { text-align: right  !important;}
-.imt-al-center { text-align: center !important;}
-.imt-al-left   { text-align: left   !important;}
+.imp-al-right  { text-align: right  !important;}
+.imp-al-center { text-align: center !important;}
+.imp-al-left   { text-align: left   !important;}
 
-.imt-va-top    { vertical-align: top    !important;}
-.imt-va-middle { vertical-align: middle !important;}
-.imt-va-bottom { vertical-align: bottom !important;}
-
-
-.imt-fw-bold   { font-weight: bold   !important;}
-.imt-fw-normal { font-weight: normal !important;}
-
-.imt-fs-italic { font-style: italic !important;}
-.imt-fs-none   { font-style: none   !important;}
+.imp-va-top    { vertical-align: top    !important;}
+.imp-va-middle { vertical-align: middle !important;}
+.imp-va-bottom { vertical-align: bottom !important;}
 
 
-.imt-fl-left  { float: left  !important;}
-.imt-fl-right { float: right !important;}
+.imp-fw-bold   { font-weight: bold   !important;}
+.imp-fw-normal { font-weight: normal !important;}
 
-.imt-fl-imgLeft  { float: left  !important; margin-right: 10px !important;}
-.imt-fl-imgRight { float: right !important; margin-left:  10px !important;}
-
-.imt-clear { clear: both !important;}
-.imt-clearfix:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0; }
+.imp-fs-italic { font-style: italic !important;}
+.imp-fs-none   { font-style: none   !important;}
 
 
-.imt-w-auto   { width: auto !important;}
-.imt-w-100per { width: 100% !important;}
+.imp-fl-left  { float: left  !important;}
+.imp-fl-right { float: right !important;}
+
+.imp-fl-imgLeft  { float: left  !important; margin-right: 10px !important;}
+.imp-fl-imgRight { float: right !important; margin-left:  10px !important;}
+
+.imp-clear { clear: both !important;}
+.imp-clearfix:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0; }
 
 
-.imt-tbl-fixed { table-layout: fixed !important;}
+.imp-w-auto   { width: auto !important;}
+.imp-w-100per { width: 100% !important;}
 
 
-.imt-whs-nowrap { white-space: nowrap !important;}
-.imt-whs-normal { white-space: normal !important;}
+.imp-tbl-fixed { table-layout: fixed !important;}
 
 
-.imt-bd-none  { border:        none !important;}
-.imt-bdt-none { border-top:    none !important;}
-.imt-bdl-none { border-left:   none !important;}
-.imt-bdr-none { border-right:  none !important;}
-.imt-bdb-none { border-bottom: none !important;}
+.imp-whs-nowrap { white-space: nowrap !important;}
+.imp-whs-normal { white-space: normal !important;}
+
+
+.imp-bd-none  { border:        none !important;}
+.imp-bdt-none { border-top:    none !important;}
+.imp-bdl-none { border-left:   none !important;}
+.imp-bdr-none { border-right:  none !important;}
+.imp-bdb-none { border-bottom: none !important;}
+
+
+/*
+ * Release Notes:
+ *
+ * 2011-08-06 - oosugi@skillpartners.co.jp
+ *              初回作成
+ */

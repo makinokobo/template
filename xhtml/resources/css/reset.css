@@ -71,68 +71,71 @@ input,select {vertical-align: middle;}
  * CSS設計時には使用せず、主に運用や修正フェーズで、
  * 共通設定されたCSSを書き換えるより個別に設定したほうがよいと判断される場合に使用する。
  *
- * Prefix: ".imt-"
+ * Prefix: ".imp-"
  */
 
-.imt-fz-LLL { font-size:   2em !important; }
-.imt-fz-LL  { font-size: 1.8em !important; }
-.imt-fz-L   { font-size: 1.6em !important; }
-.imt-fz-M   { font-size: 1.4em !important; }
-.imt-fz-S   { font-size: 1.2em !important; }
-.imt-fz-SS  { font-size:   1em !important; }
-.imt-fz-SSS { font-size: 0.8em !important; }
+.imp-fz-LLL { font-size:   2em !important; }
+.imp-fz-LL  { font-size: 1.8em !important; }
+.imp-fz-L   { font-size: 1.6em !important; }
+.imp-fz-M   { font-size: 1.4em !important; }
+.imp-fz-S   { font-size: 1.2em !important; }
+.imp-fz-SS  { font-size:   1em !important; }
+.imp-fz-SSS { font-size: 0.8em !important; }
 
 
-.imt-al-right  { text-align: right  !important;}
-.imt-al-center { text-align: center !important;}
-.imt-al-left   { text-align: left   !important;}
+.imp-al-right  { text-align: right  !important;}
+.imp-al-center { text-align: center !important;}
+.imp-al-left   { text-align: left   !important;}
 
-.imt-va-top    { vertical-align: top    !important;}
-.imt-va-middle { vertical-align: middle !important;}
-.imt-va-bottom { vertical-align: bottom !important;}
-
-
-.imt-fw-bold   { font-weight: bold   !important;}
-.imt-fw-normal { font-weight: normal !important;}
-
-.imt-fs-italic { font-style: italic !important;}
-.imt-fs-none   { font-style: none   !important;}
+.imp-va-top    { vertical-align: top    !important;}
+.imp-va-middle { vertical-align: middle !important;}
+.imp-va-bottom { vertical-align: bottom !important;}
 
 
-.imt-fl-left  { float: left  !important;}
-.imt-fl-right { float: right !important;}
+.imp-fw-bold   { font-weight: bold   !important;}
+.imp-fw-normal { font-weight: normal !important;}
 
-.imt-fl-imgLeft  { float: left  !important; margin-right: 10px !important;}
-.imt-fl-imgRight { float: right !important; margin-left:  10px !important;}
-
-.imt-clear { clear: both !important;}
-.imt-clearfix:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0; }
+.imp-fs-italic { font-style: italic !important;}
+.imp-fs-none   { font-style: none   !important;}
 
 
-.imt-w-auto   { width: auto !important;}
-.imt-w-100per { width: 100% !important;}
+.imp-fl-left  { float: left  !important;}
+.imp-fl-right { float: right !important;}
+
+.imp-fl-imgLeft  { float: left  !important; margin-right: 10px !important;}
+.imp-fl-imgRight { float: right !important; margin-left:  10px !important;}
+
+.imp-clear { clear: both !important;}
+.imp-clearfix:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0; }
 
 
-.imt-tbl-fixed { table-layout: fixed !important;}
+.imp-w-auto   { width: auto !important;}
+.imp-w-100per { width: 100% !important;}
 
 
-.imt-whs-nowrap { white-space: nowrap !important;}
-.imt-whs-normal { white-space: normal !important;}
+.imp-tbl-fixed { table-layout: fixed !important;}
 
 
-.imt-bd-none  { border:        none !important;}
-.imt-bdt-none { border-top:    none !important;}
-.imt-bdl-none { border-left:   none !important;}
-.imt-bdr-none { border-right:  none !important;}
-.imt-bdb-none { border-bottom: none !important;}
+.imp-whs-nowrap { white-space: nowrap !important;}
+.imp-whs-normal { white-space: normal !important;}
+
+
+.imp-bd-none  { border:        none !important;}
+.imp-bdt-none { border-top:    none !important;}
+.imp-bdl-none { border-left:   none !important;}
+.imp-bdr-none { border-right:  none !important;}
+.imp-bdb-none { border-bottom: none !important;}
 
 
 /*
  * Release Notes:
  *
- * 2011.08.05 - oosugi@skillpartners.co.jp
- *              imt-系のスタイル追加
+ * 2011-08-06 - oosugi@skillpartners.co.jp
+ *              imt系の接頭辞を"imp-"に変更
  *
- * 2011.08.01 - oosugi@skillpartners.co.jp
+ * 2011-08-05 - oosugi@skillpartners.co.jp
+ *              imt系のスタイル追加
+ *
+ * 2011-08-01 - oosugi@skillpartners.co.jp
  *              スマートフォンで見たときに自動でフォントサイズが調整されるのを無効に
  */

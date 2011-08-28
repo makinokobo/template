@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*!
+ * Parts Styles
+ * 
+ * Prefix rule "prt-"
+ * prt-系は入れ子にしない。
+ * prt-の中や、prt-を囲む形にしたい場合はcmn-にする。
+ */
+
+
+/**
+ * prt-NAME
+ *
+ * @create: 2011-00-00 [NAME@skillpartners.co.jp]
+ * @modify: 2011-00-00 [NAME@skillpartners.co.jp]
+ */
+
+.prt-NAME {
+}
+
+
+	/**
+	 * INNERCLASS
+	 */
+	.prt-NAME .INNERCLASS {
+	}
+
+
+
+
+/*
+ * Release Notes
+ *
+ * 2011-00-00 [NAME@skillpartners.co.jp]
+ *   @create: all
+ */
