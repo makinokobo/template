@@ -4,7 +4,7 @@
 
 
 ## 最新版ダウンロード
-https://github.com/downloads/makinokobo/template/template.v0.1.zip
+https://github.com/downloads/makinokobo/template/template.zip
 
 
 ## 内容
