@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/*!
+ * 開発用ファイル用スタイルシート
+ *
+ * /_DEVELOP 内の開発用ファイルの見出しやコメントなどを見やすくするためのスタイル。
+ * 
+ * [!] 本番公開するHTMLでは読み込ませない。
+ * [!] 00_pageTemplate.html は、これを元に本番公開用ページHTMLを作成するため、
+ *     _DEVELOP.cssは読み込ませない。
+ *
+ *
+ *
+ */
+
+.DEV-h1 {
+	margin: 0 !important;
+	padding: 10px !important;
+	background: #333333 !important;
+	color: #FFF !important;
+	font-size: 120% !important;
+	line-height: 1.334 !important;
+	word-break: break-all !important;
+	word-wrap: break-word !important;
+	zoom: 1;
+}
+.DEV-h2 {
+	margin: 0 !important;
+	padding: 7px 10px !important;
+	background: #666666 !important;
+	color: #FFF !important;
+	font-size: 120% !important;
+	line-height: 1.334 !important;
+	word-break: break-all !important;
+	word-wrap: break-word !important;
+}
+.DEV-h3 {
+	margin: 0 !important;
+	padding: 3px 10px !important;
+	background: #999999 !important;
+	color: #FFF !important;
+	font-size: 120% !important;
+	line-height: 1.334 !important;
+	word-break: break-all !important;
+	word-wrap: break-word !important;
+}
+.DEV-notes {
+	margin: 0 20px 20px !important;
+	padding: 10px !important;
+	background: #FFF !important;
+	border: 3px solid #CCCCCC;
+	color: #666666 !important;
+	font-size: 120% !important;
+	line-height: 1.334 !important;
+	word-break: break-all !important;
+	word-wrap: break-word !important;
+}
+.DEV-table th,
+.DEV-table td {
+	margin: 0;
+	padding: 0;
+	border: 1px solid #666666;
+}
+.DEV-p {
+	margin: 5px 0 20px;
+	font-size: 140%;
+	line-height: 1.429;
+}
+.DEV-p2 {
+	margin: 20px 0 20px;
+	font-size: 120%;
+	line-height: 1.365;
+}
+
+
+/*
+ * Release Notes:
+ *
+ * 2011-08-05 - oosugi@skillpartners.co.jp
+ *              初回作成
+ */
