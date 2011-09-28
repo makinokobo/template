@@ -14,9 +14,9 @@
 /**
  * $.fn.mk_hoverSwap
  * 
- * @varsion : 0.1
+ * @varsion : 0.2
  * @author  : http://www.makinokobo.com - kobo@makinokobo.com
- * @update  : 2011.07.03 - oosugi@skillpartners.co.jp
+ * @update  : 2011-09-28 - oosugi@skillpartners.co.jp
  *
  *
  * 
@@ -67,15 +67,21 @@ $.fn.mk_hoverSwap = function(options){
 	var o = $.extend(defaults, options);
 	
 	this.each(function(){
-		var $this = $(this);
-		var $target = (o.parent) ? $this.parent() : $this;
-		var img_src = $this.attr('src');
+		var $this = $(this),
+			$target = (o.parent) ? $this.parent() : $this,
+			img_src = $this.attr('src'),
+			dotI = img_src.lastIndexOf('.'),
+			ext = img_src.substr(dotI),
+			off = o.off + ext,
+			on = o.on + ext,
+			img_srcOn,
+			$img_pre;
 		
-		if(img_src.match(o.off+'\.')){
-			var img_srcOn = img_src.replace(o.off+'\.',o.on+'\.');
+		if (img_src.match(off)){
+			img_srcOn = img_src.replace(off, on);
 			
 			//preload
-			var $img_pre = $('<img/>',{ 'src': img_srcOn });
+			$img_pre = $('<img/>',{ 'src': img_srcOn });
 			
 			//action
 			$target
